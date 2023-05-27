@@ -5,7 +5,7 @@ import "./Navbar.scss";
 
 const Navbar = () => {
   const [isDarkMode, setDarkMode] = useState(false);
-  const [mobileState, setMobileState] = useState(true);
+  const [mobileState, setMobileState] = useState(false);
 
   const toggleMobile = () => {
     setMobileState(!mobileState);
