@@ -1,0 +1,47 @@
+@import "../../Styles/scss/general.scss";
+
+.contactContainer {
+  max-width: 55%;
+  margin: 0 auto;
+  text-align: center;
+  height: 80vh;
+
+  @include touch {
+    max-width: 75%;
+  }
+
+  @include mobile {
+    max-width: 85%;
+  }
+
+  .contactSubtext {
+    color: gray;
+    font-size: 1.4em;
+    line-height: 1.5em;
+
+    @include touch {
+      font-size: 1.3em;
+    }
+
+    @include mobile {
+      font-size: 1.1em;
+    }
+  }
+
+  .email {
+    color: black;
+    font-weight: bold;
+  }
+
+  .contactIcons {
+    display: flex;
+    justify-content: center;
+  }
+
+  .eachIcon {
+    color: black;
+    width: 1.7em;
+    height: 1.7em;
+    padding: 0 0.3em 0;
+  }
+}

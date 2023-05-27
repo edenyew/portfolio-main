@@ -1,0 +1,101 @@
+@import "../../Styles/scss/general.scss";
+
+.experienceContainer {
+  align-items: flex-start;
+  padding-top: 3rem;
+  padding-left: 9.6rem;
+  margin-bottom: 2em;
+  max-width: 75%;
+  overflow: hidden;
+
+  @include touch {
+    padding: 3rem 5rem 0rem;
+    max-width: 65%;
+  }
+
+  @include mobile {
+    padding: 3rem 1.5rem 0rem;
+    max-width: 95%;
+  }
+}
+
+.experienceBorder {
+  margin-bottom: 2em;
+}
+
+.experience_subheading {
+  font-size: 1.4em;
+  color: gray;
+  font-weight: 600;
+  margin-bottom: 0.5em;
+
+  @include touch {
+    font-size: 20px;
+  }
+
+  @include mobile {
+    font-size: 18px;
+  }
+}
+
+.role_and_company_border {
+  font-weight: 700;
+  font-size: 1.6em;
+  margin-bottom: 0.5em;
+  display: flex;
+  word-wrap: break-word;
+
+  @include touch {
+    font-size: 1.4em;
+  }
+
+  @include mobile {
+    font-size: 1.4em;
+  }
+}
+
+.company {
+  padding-left: 1.5em;
+
+  @include mobile {
+    padding-left: 0.5em;
+  }
+}
+
+.tech_subheading {
+  font-weight: 600;
+  font-size: 1.3em;
+  color: gray;
+
+  @include touch {
+    font-size: 18px;
+  }
+
+  @include mobile {
+    font-size: 16px;
+  }
+}
+
+.jobscope {
+  font-size: 1.3em;
+  margin-bottom: 1.5em;
+  line-height: 2em;
+
+  @include touch {
+    font-size: 20px;
+    line-height: 1.8em;
+  }
+
+  @include mobile {
+    font-size: 18px;
+    line-height: 1.8em;
+  }
+}
+
+.tech_icons {
+  display: flex;
+}
+
+.techStack {
+  margin-bottom: 5em;
+}

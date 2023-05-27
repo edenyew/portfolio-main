@@ -1,0 +1,90 @@
+@import "../../Styles/scss/general.scss";
+
+.projectContainer {
+  align-items: flex-start;
+  padding-top: 3rem;
+  padding-left: 9.6rem;
+  margin-bottom: 2em;
+  max-width: 85%;
+  overflow: hidden;
+
+  @include touch {
+    padding: 3rem 5rem 0rem;
+    max-width: 95%;
+  }
+
+  @include mobile {
+    padding: 3rem 1.5rem 0rem;
+    max-width: 95%;
+  }
+
+  .individualproject {
+    margin-top: 2em;
+    display: flex;
+    flex-direction: row;
+    max-width: 100%;
+    align-items: center;
+
+    @include touch {
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: normal;
+    }
+  }
+
+  .subheading {
+    color: gray;
+    font-size: 1.4em;
+
+    @include touch {
+      font-size: 1.3em;
+    }
+
+    @include mobile {
+      font-size: 1.1em;
+    }
+  }
+
+  .titleborder {
+    max-width: 55%;
+
+    @include touch {
+      max-width: 100%;
+    }
+  }
+
+  .forTitle {
+    @include touch {
+      font-size: 1.5em;
+    }
+
+    @include mobile {
+      font-size: 1.3em;
+    }
+  }
+
+  .imageforproject {
+    max-width: 45%;
+    margin: 0 auto;
+
+    @include touch {
+      max-width: 100%;
+    }
+  }
+
+  .projectImage {
+    width: 100%;
+  }
+
+  .sourceCode {
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: 0.1s ease-in-out;
+    max-width: auto;
+  }
+
+  .icons {
+    display: flex;
+    margin-top: 2em;
+  }
+}

@@ -1,0 +1,96 @@
+@import "../../Styles/scss/general.scss";
+
+.otherProjectContainer {
+  align-items: flex-start;
+  padding-top: 3rem;
+  padding-left: 9.6rem;
+  margin-bottom: 8em;
+  max-width: 85%;
+  overflow: hidden;
+
+  @include touch {
+    padding: 3rem 5rem 0rem;
+    max-width: 95%;
+  }
+
+  @include mobile {
+    padding: 3rem 1.5rem 0rem;
+    max-width: 95%;
+  }
+
+  .displayProjects {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 2em;
+    row-gap: 3em;
+    max-width: 100%;
+
+    @include touch {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @include mobile {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .otherProjectBorder {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-right: 1em;
+  }
+
+  .otherProjectImage {
+    height: 12em;
+    margin-bottom: 1.5em;
+  }
+
+  .projectTitle {
+    font-size: 1.2em;
+  }
+
+  .projectSubheading {
+    font-size: 1.1em;
+    line-height: 1.6em;
+    color: gray;
+    margin-bottom: 2em;
+    height: 9em;
+  }
+
+  .sourceCode {
+    font-size: 1.1em;
+  }
+
+  .otherProjectsBorder {
+    display: flex;
+    margin-top: 1.5em;
+  }
+
+  .projectimagescript {
+    height: 35px;
+    width: 36px;
+    margin: 0 auto;
+    padding-right: 0.25em;
+
+    @include touch {
+      height: 35px;
+      width: 36px;
+    }
+  }
+
+  .imageDescription {
+    font-size: small;
+    color: grey;
+    margin-top: 4px;
+    text-align: center;
+    visibility: hidden;
+    transform: translateY(100%);
+    transition: all 0.2s ease-in-out;
+  }
+
+  .projectimagescript:hover + .imageDescription {
+    visibility: visible;
+    transform: translateY(0%);
+  }
+}

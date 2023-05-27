@@ -1,0 +1,99 @@
+@import "../../Styles/scss/general.scss";
+
+.skillsContainer {
+  align-items: flex-start;
+  padding-top: 3rem;
+  padding-left: 9.6rem;
+  margin-bottom: 2em;
+  max-width: 50%;
+  overflow: hidden;
+
+  @include touch {
+    padding: 3rem 5rem 0rem;
+    max-width: 75%;
+  }
+
+  @include mobile {
+    padding: 3rem 1.5rem 0rem;
+    max-width: 95%;
+  }
+}
+
+.title {
+  margin-bottom: 0.6em;
+  font-size: 1.5em;
+
+  @include touch {
+    font-size: 20px;
+  }
+
+  @include mobile {
+    font-size: 18px;
+  }
+}
+
+.headingBorder {
+  margin-bottom: 1.5em;
+}
+
+.heading {
+  font-size: 3.2em;
+  font-weight: bolder;
+
+  @include touch {
+    font-size: 2.8em;
+  }
+
+  @include mobile {
+    font-size: 2em;
+  }
+}
+
+.imagescript {
+  height: 45px;
+  width: 45px;
+  margin: 0 auto;
+  padding-right: 0.5em;
+
+  @include touch {
+    height: 40px;
+    width: 40px;
+  }
+}
+
+.imageDescription {
+  font-size: small;
+  color: grey;
+  margin-top: 4px;
+  text-align: center;
+  visibility: hidden;
+  transform: translateY(100%);
+  transition: all 0.2s ease-in-out;
+}
+
+.imagescript:hover + .imageDescription {
+  visibility: visible;
+  transform: translateY(0%);
+}
+
+.eachSkills {
+  display: flex;
+  flex-direction: column;
+  max-width: 55px;
+}
+
+.skillsBorder {
+  display: flex;
+  align-items: flex-start;
+  margin-left: -0.5em;
+  max-width: 100%;
+  flex-wrap: wrap;
+
+  @include touch {
+    max-width: 65%;
+  }
+
+  @include mobile {
+    max-width: 95%;
+  }
+}

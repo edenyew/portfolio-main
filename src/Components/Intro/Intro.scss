@@ -1,0 +1,146 @@
+@import "../../Styles/scss/general.scss";
+
+.container {
+  align-items: flex-start;
+  padding-top: 3rem;
+  padding-left: 9.6rem;
+  margin-bottom: 1em;
+  max-width: 50%;
+  overflow: hidden;
+
+  @include touch {
+    padding: 3rem 5rem 0rem;
+    max-width: 65%;
+  }
+
+  @include mobile {
+    padding: 3rem 1.5rem 0rem;
+    max-width: 95%;
+  }
+}
+
+.emoji {
+  width: 50px;
+  height: 50px;
+  animation-name: wave;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-delay: 3s;
+
+  @keyframes wave {
+    0% {
+      transform: rotate(0deg);
+    }
+    25% {
+      transform: rotate(10deg);
+    }
+    75% {
+      transform: rotate(-10deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+}
+
+.intro {
+  margin-top: 2px;
+  padding-top: 15px;
+  margin-bottom: 4px;
+}
+
+.intro-heading {
+  font-size: 3.2em;
+  font-weight: bolder;
+
+  @include touch {
+    font-size: 2.8em;
+  }
+
+  @include mobile {
+    font-size: 2em;
+  }
+}
+
+.subcontainer {
+  margin-top: 2px;
+  margin-bottom: 4px;
+}
+
+.sub {
+  font-size: 25px;
+  line-height: 2em;
+  height: 90px;
+  font-weight: 600;
+
+  @include touch {
+    font-size: 20px;
+    margin-top: 1em;
+  }
+
+  @include mobile {
+    font-size: 18px;
+    margin-top: 1em;
+  }
+}
+
+.bodyText {
+  font-size: 25px;
+  font-weight: 600;
+  margin-top: 3em;
+
+  @include touch {
+    font-size: 20px;
+    margin-top: 1em;
+  }
+
+  @include mobile {
+    font-size: 18px;
+    margin-top: 2em;
+  }
+}
+
+.body-link {
+  color: black;
+  border-bottom: 2px solid #000;
+  padding-bottom: 5px;
+  text-decoration: none;
+  transition: border-bottom 0.1s ease-in-out;
+
+  &:hover {
+    border-bottom: none;
+  }
+}
+
+.links {
+  font-size: 22px;
+  font-weight: 600;
+  display: flex-start;
+  justify-content: center;
+  margin-top: 5rem;
+  margin-left: -15px;
+  margin-bottom: 4rem;
+
+  a {
+    color: black;
+    margin: 0 15px;
+    border-bottom: 2px solid #000;
+    padding-bottom: 5px;
+    text-decoration: none;
+    transition: border-bottom 0.1s ease-in-out;
+
+    &:hover {
+      border-bottom: none;
+    }
+  }
+
+  @include touch {
+    font-size: 18px;
+    margin-top: 7rem;
+  }
+
+  @include mobile {
+    font-size: 16px;
+  }
+}
