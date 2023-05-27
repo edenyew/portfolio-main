@@ -45,7 +45,6 @@ nav {
     list-style: none;
 
     @include touch {
-      display: none;
       flex-direction: column;
       align-items: flex-start;
       justify-content: flex-start;
@@ -60,16 +59,34 @@ nav {
     font-weight: 500;
     font-size: 21px;
     white-space: nowrap;
-
-    // transition: 0.1 ease-in-out;
-    // &:hover,
-    // &:active,
-    // &:focus {
-    //   border-bottom: 2px solid #000;
-    //   padding-bottom: 5px;
-    // }
+    display: none;
 
     @include touch {
+      display: block;
+      font-size: 19px;
+      padding-top: 1.25rem;
+    }
+
+    @include mobile {
+      margin-left: -3.5rem;
+    }
+  }
+
+  #navbar-mobile-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+  }
+
+  #navbar-mobile-menu li {
+    padding: 0.5rem 15px 0;
+    font-weight: 500;
+    font-size: 21px;
+    white-space: nowrap;
+
+    @include touch {
+      display: none;
       font-size: 19px;
       padding-top: 1.25rem;
     }
@@ -89,10 +106,6 @@ nav {
       border-bottom: 2px solid #000;
       padding-bottom: 5px;
     }
-  }
-
-  .navbar-mobile {
-    display: none;
   }
 
   #mobile i {

@@ -4,6 +4,14 @@ import { Link } from "react-scroll";
 import "./Navbar.scss";
 
 const Navbar = () => {
+  const navItems = [
+    { id: "about-me", label: "about me." },
+    { id: "skills", label: "skills." },
+    { id: "experience", label: "experience." },
+    { id: "projects", label: "projects." },
+    { id: "contact", label: "contact." },
+  ];
+
   const [isDarkMode, setDarkMode] = useState(false);
   const [mobileState, setMobileState] = useState(false);
 
@@ -28,31 +36,22 @@ const Navbar = () => {
       </div>
       <div className="nav_spacing">
         <ul id="navbar-menu">
-          <li>
-            <Link className="is-pointer" smooth={true} to="about-me">
-              about me.
-            </Link>
-          </li>
-          <li>
-            <Link className="is-pointer" smooth={true} to="skills">
-              skills.
-            </Link>
-          </li>
-          <li>
-            <Link className="is-pointer" smooth={true} to="experience">
-              experience.
-            </Link>
-          </li>
-          <li>
-            <Link className="is-pointer" smooth={true} to="projects">
-              projects.
-            </Link>
-          </li>
-          <li>
-            <Link className="is-pointer" smooth={true} to="contact">
-              contact.
-            </Link>
-          </li>
+          {navItems.map((item) => (
+            <li key={item.id}>
+              <Link className="is-pointer" smooth={true} to={item.id}>
+                {item.label}
+              </Link>
+            </li>
+          ))}
+        </ul>
+        <ul id="navbar-mobile-menu">
+          {navItems.map((item) => (
+            <li key={item.id}>
+              <Link className="is-pointer" smooth={true} to={item.id}>
+                {item.label}
+              </Link>
+            </li>
+          ))}
         </ul>
       </div>
       <div className="darkModeButton">
