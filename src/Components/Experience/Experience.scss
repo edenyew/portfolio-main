@@ -79,16 +79,16 @@
 .jobscope {
   font-size: 1.3em;
   margin-bottom: 1.5em;
-  line-height: 2em;
+  line-height: 1.5em;
 
   @include touch {
     font-size: 20px;
-    line-height: 1.8em;
+    line-height: 1.5em;
   }
 
   @include mobile {
     font-size: 18px;
-    line-height: 1.8em;
+    line-height: 1.5em;
   }
 }
 
